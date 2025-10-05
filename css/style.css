@@ -1,0 +1,38 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+#searchForm{
+  display: flex;
+  gap: 5px;
+}
+fieldset{
+  flex: 1;
+}
+/* Article container */
+.articleList{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  border: solid black 2px;
+  margin: 0 10px;
+}
+/* Articles */
+.articleCard{
+  border: solid black 2px;
+  width: 32%;
+  margin-top: 15px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
