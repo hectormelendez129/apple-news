@@ -10,27 +10,189 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-#searchForm{
+/******************************************
+/* GLOBAL STYLES Reference: openAI
+/*******************************************/
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  color: #222;
+  margin: 0;
+  padding: 1rem;
+}
+
+/******************************************
+/* FORM LAYOUT
+/*******************************************/
+#searchForm {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+  max-width: 1200px;
 }
-fieldset{
+
+fieldset {
   flex: 1;
+  min-width: 220px;
+  border: 2px solid #2196f3;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #f9f9f9;
 }
-/* Article container */
-.articleList{
+
+legend {
+  font-weight: bold;
+  color: #1976d2;
+  font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 90%;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+
+section {
+  margin-top: 0.5rem;
+}
+
+label {
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/******************************************
+/* BUTTON
+/*******************************************/
+button {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 1.2rem auto 0 auto;
+}
+
+button:hover {
+  background: #1976d2;
+}
+
+/******************************************
+/* ARTICLE SECTION
+/*******************************************/
+#articles {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#articles h1 {
+  color: #1565c0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.articleList {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5px;
-  border: solid black 2px;
-  margin: 0 10px;
+  gap: 15px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
 }
-/* Articles */
-.articleCard{
-  border: solid black 2px;
-  width: 32%;
-  margin-top: 15px;
+
+/******************************************
+/* ARTICLE CARDS
+/*******************************************/
+.articleCard {
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 30%;
+  min-width: 300px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.articleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/******************************************
+/* ARTICLE CONTENT
+/*******************************************/
+.articleCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.articleCard h3 {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.articleCard h3#title {
+  color: #1565c0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.articleCard h3#urlH3 a {
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: bold;
+}
+
+.articleCard h3#urlH3 a:hover {
+  text-decoration: underline;
+}
+
+/******************************************
+/* RESPONSIVE DESIGN
+/*******************************************/
+@media screen and (max-width: 900px) {
+  #searchForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .articleCard {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .articleCard {
+    width: 90%;
+  }
 }
 
 /******************************************
